@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/02 20:24:23 by vminomiy          #+#    #+#             */
-/*   Updated: 2021/08/11 22:54:24 by vminomiy         ###   ########.fr       */
+/*   Updated: 2021/09/14 22:55:50 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int	memalloc_struct(t_table **table, t_monitor **monitor, int n)
 	void	*mem;
 
 	size = sizeof(t_monitor) + sizeof(t_table) + n * (sizeof(t_philo)
-			+ sizeof(t_philo *) + sizeof(pthread_mutex_t) + sizeof(int));
+			+ sizeof(t_philo *)/* + sizeof(pthread_mutex_t) + sizeof(int)*/);
 	mem = malloc(size);
 	if (!mem)
 		return (1);

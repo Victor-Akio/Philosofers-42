@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 16:59:34 by vminomiy          #+#    #+#             */
-/*   Updated: 2021/08/03 22:43:34 by vminomiy         ###   ########.fr       */
+/*   Updated: 2021/09/14 23:13:15 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,15 +88,3 @@ int	ft_atoi(const char *str)
 	}
 	return (ft_manage_longmin(result, count));
 }
-
-// int	ft_loop_iterate(int (*func)(t_seat *), t_seat *arr, unsigned int n)
-// {
-// 	unsigned int	i;
-// 	int		ret;
-
-// 	i = -1;
-// 	ret = 0;
-// 	while (++i < n && !ret)
-// 		ret = func(&arr[i]);
-// 	return (ret);
-// }
