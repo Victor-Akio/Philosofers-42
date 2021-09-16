@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 23:23:40 by vminomiy          #+#    #+#             */
-/*   Updated: 2021/09/15 00:11:25 by vminomiy         ###   ########.fr       */
+/*   Updated: 2021/09/16 20:19:48 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	*routine(void *philosofer)
 		usleep(timeval_to_usec(phi->table->t_eat));
 		pthread_mutex_unlock(phi->r_fork);
 		pthread_mutex_unlock(phi->l_fork);
-		phi->locks &= ~2;/* 1111 1101 */
+		phi->locks &= ~2;
 		display(phi, 's');
 		usleep(timeval_to_usec(phi->table->t_slp));
 		display(phi, 't');
@@ -102,7 +102,7 @@ void	*food_manager(void *monitor)
 	{
 		i = mon->queue[mon->idx];
 		pthread_mutex_unlock(&mon->philo[i].take_fork);
-		mon->philo[i].locks &= ~1; /* 1111 1110 */
+		mon->philo[i].locks &= ~1;
 		pthread_mutex_lock(&mon->philo[i].drop_fork);
 		tmp = ++(mon->idx) % mon->table->n;
 		mon->idx = tmp;

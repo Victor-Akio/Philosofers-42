@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/15 22:08:44 by vminomiy          #+#    #+#             */
-/*   Updated: 2021/09/15 00:43:33 by vminomiy         ###   ########.fr       */
+/*   Updated: 2021/09/16 20:22:05 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,9 @@ void	*end_dinner(t_monitor *monitor)
 
 void	take_forks(t_philo *phi)
 {
-	phi->locks |= 1;/* 0000 0001 */
+	phi->locks |= 1;
 	pthread_mutex_lock(&phi->take_fork);
-	phi->locks |= 2;/* 0000 0010 => 0000 0011*/
+	phi->locks |= 2;
 	pthread_mutex_lock(phi->l_fork);
 	display(phi, 'f');
 	pthread_mutex_lock(phi->r_fork);

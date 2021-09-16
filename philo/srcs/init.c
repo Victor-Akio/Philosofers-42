@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/02 20:24:23 by vminomiy          #+#    #+#             */
-/*   Updated: 2021/09/14 22:55:50 by vminomiy         ###   ########.fr       */
+/*   Updated: 2021/09/16 20:53:51 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ void	init_phi(t_monitor *monitor)
 	}
 }
 
-/* Here will be decided who eats first odds or even */
 void	init_queue(t_monitor *monitor)
 {
 	int	i;
@@ -79,7 +78,7 @@ int	memalloc_struct(t_table **table, t_monitor **monitor, int n)
 	void	*mem;
 
 	size = sizeof(t_monitor) + sizeof(t_table) + n * (sizeof(t_philo)
-			+ sizeof(t_philo *)/* + sizeof(pthread_mutex_t) + sizeof(int)*/);
+			+ sizeof(pthread_mutex_t) + sizeof(int));
 	mem = malloc(size);
 	if (!mem)
 		return (1);

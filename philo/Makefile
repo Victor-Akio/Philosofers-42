@@ -17,12 +17,12 @@ RM		=	@/bin/rm -rf
 
 FILES		=	main.c			\
 				init.c			\
-				error.c			\
+				help.c			\
 				printer.c		\
 				manager.c		\
 				time.c			\
 				utils.c			\
-				libft.c	
+				lib.c	
 
 SRCS	=	$(addprefix $(DIR), $(FILES))
 OBJ		=	$(SRCS:$(DIR)%.c=$(OBJ_DIR)%.o)
