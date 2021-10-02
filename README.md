@@ -17,24 +17,16 @@ There is an extra option, if set, it will limit the amount of times one philosof
 
 ### Installation
 
-o build the programm there is only a few steps:
-First of all, you can download the repository through the following steps in any shell of your preference:
-```
-git clone https://github.com/Victor-Akio/Push-Swap-42.git push_swap_42
-cd push_swap_42
-make
-```
-This commands will compile everything and a executable "push_swap" should be created.
-
-### Instructions
 To build the programm there is only a few steps:
 
 First of all, you can download the repository through the following steps in any shell of your preference:
 ```
 git clone https://github.com/Victor-Akio/Philosofers-42.git philosofers-42
-cd philosofers-42
+cd philosofers-42/philo/
 make
 ```
+This commands will compile everything and a executable "philo" should be created.
+
 To run the application you should input the programm with the arguments, the parameters to run the simulation. For example:
 ```
 $ ./philo 4 410 200 200
