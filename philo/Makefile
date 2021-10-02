@@ -37,11 +37,7 @@ $(NAME)	:	$(OBJ)
 			$(CC) -fsanitize=address -o $@ $^
 
 clean	:
-			for dir in $(MODULES); do	\
-				$(MAKE) clean -C $$dir;	\
-			done
 			$(RM) $(OBJ_DIR)
-
 
 fclean	:	clean
 			@$(RM) $(NAME)

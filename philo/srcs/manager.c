@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 23:23:40 by vminomiy          #+#    #+#             */
-/*   Updated: 2021/09/16 20:19:48 by vminomiy         ###   ########.fr       */
+/*   Updated: 2021/09/16 22:32:24 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	*routine(void *philosofer)
 	pthread_mutex_lock(phi->init);
 	pthread_mutex_unlock(phi->init);
 	display(phi, 'b');
-	gettimeofday(&phi->last_feed, NULL);
 	while (phi->alive)
 	{
 		take_forks(phi);

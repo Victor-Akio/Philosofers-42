@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 23:32:26 by vminomiy          #+#    #+#             */
-/*   Updated: 2021/09/15 02:30:11 by vminomiy         ###   ########.fr       */
+/*   Updated: 2021/10/02 19:54:10 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,12 @@ void	display(t_philo *phi, char flag)
 	else if (flag == 'd')
 		msg = "died";
 	else if (flag == 'b')
-		msg = "Philosofer initialized";
+		msg = "is thinking";
 	if (get_status()->state != 1)
 	{
 		pthread_mutex_lock(&get_status()->mutex);
 		time = (current_time(get_timestamp(phi), &phi->table->start)) / 1000;
-		printf("%lu ms %03d %s.\n", time, phi->idx, msg);
+		printf("%lu %d %s.\n", time, phi->idx, msg);
 		pthread_mutex_unlock(&get_status()->mutex);
 		if (flag == 'd')
 			get_status()->state = 1;
