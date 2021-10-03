@@ -17,7 +17,6 @@ RM		=	@/bin/rm -rf
 
 FILES		=	main.c			\
 				init.c			\
-				help.c			\
 				printer.c		\
 				manager.c		\
 				time.c			\

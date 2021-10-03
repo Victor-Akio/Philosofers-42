@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 21:37:47 by vminomiy          #+#    #+#             */
-/*   Updated: 2021/08/11 22:49:45 by vminomiy         ###   ########.fr       */
+/*   Updated: 2021/10/02 21:29:20 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,9 @@ int	main(int ac, char **av)
 	int			ret;
 
 	ret = 0;
-	if (strcmp(av[1], "--help") == 0)
+	if (strcmp(av[1], "--help") == 0 || strcmp(av[1], "--H") == 0)
 		help();
-	if (ac > 6 || ac < 5 || !validate_args(av) || ft_atoi(av[1]) == 0)
+	if (ac > 6 || ac < 5 || !validate_args(av) || ft_atoi(av[1]) <= 1)
 	{
 		printf("Error - Invalid arguments.\n");
 		return (1);
